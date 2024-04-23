@@ -1,0 +1,120 @@
+/* Estilo do popup de visitantes */
+.popup-visitor {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da borda direita da tela */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px; /* Reduzindo o padding */
+    z-index: 1000;
+}
+
+/* Estilo da foto do visitante */
+.popup-visitor .visitor-photo {
+    width: 60px; /* Reduzindo o tamanho da foto */
+    height: 60px; /* Reduzindo o tamanho da foto */
+    margin-right: 10px; /* Espaçamento entre a foto e as informações do visitante */
+    overflow: hidden;
+}
+
+/* Estilo do nome do visitante */
+.popup-visitor .visitor-name {
+    font-size: 14px; /* Reduzindo o tamanho do nome */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo do estado do visitante */
+.popup-visitor .visitor-state {
+    font-size: 12px; /* Reduzindo o tamanho do estado */
+    margin-bottom: 10px;
+}
+
+/* Estilo do texto da mensagem do visitante */
+.popup-visitor .visitor-message {
+    font-size: 12px; /* Reduzindo o tamanho da mensagem */
+    margin-bottom: 10px;
+    color: rgb(64, 64, 63);
+}
+
+/* Estilo das estrelas de classificação */
+.popup-visitor .visitor-rating {
+    font-size: 16px; /* Reduzindo o tamanho da classificação */
+}
+
+/* Estilo das estrelas individuais */
+.popup-visitor .visitor-rating .star {
+    color: #ffd700; /* Cor das estrelas preenchidas */
+}
+
+/* Estilo das estrelas vazias */
+.popup-visitor .visitor-rating .star-empty {
+    color: #ccc; /* Cor das estrelas vazias */
+}
+
+/* Estilo do contêiner das estrelas */
+.popup-visitor .visitor-rating .star-container {
+    display: inline-block;
+}
+
+/* Estilo do botão de fechar o popup */
+.popup-visitor .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+}
+
+.visitor-photo {
+    width: 100px; /* Tamanho do círculo */
+    height: 100px; /* Tamanho do círculo */
+    border-radius: 50%; /* Forma de círculo */
+    overflow: hidden; /* Esconde o excesso de conteúdo */
+    margin-right: 10px; /* Espaçamento entre a foto e as informações do visitante */
+    border: solid 2px #00d44f; /* Borda em volta da foto  */
+}
+
+.visitor-photo img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Forma de círculo */
+}
+
+.popup-visitor .visitor-time {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+/* Animação de entrada */
+.popup-fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de saída */
+.popup-fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

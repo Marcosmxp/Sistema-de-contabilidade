@@ -1,0 +1,171 @@
+/* Estilo para o formulário de contato */
+.contact-form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Reduzido o tamanho do pop-up */
+    max-width: 700px; /* Definido um tamanho máximo */
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 9999;
+}
+.contact-form-success {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 9999;
+}
+.contact-form-success h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00d44f; /* Cor verde para o título */
+}
+.contact-form-success p {
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+}
+.contact-form-success .close-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #444;
+}
+
+/* Estilo para as informações da empresa */
+.company-info {
+    background: rgb(0,212,79);
+    background: radial-gradient(circle, rgba(0,212,79,1) 0%, rgba(16,230,95,1) 100%);
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    border-radius: 16px 0 0 16px;
+    padding: 30px;
+    width: 50%;
+    float: left;
+    flex: 1; /* Ocupa todo o espaço disponível */
+    line-height: 1.5;
+    height: 100%; /* Definindo a altura igual à altura do container */
+    box-sizing: border-box; /* Para incluir o padding na altura total */
+}
+
+.company-info h2 {
+    margin-top: 0;
+}
+
+.company-info ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.company-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o formulário de contato */
+.contact-form {
+    padding: 30px;
+    width: 50%;
+    float: right;
+    height: 100%; /* Definindo a altura igual à altura do container */
+    box-sizing: border-box; /* Para incluir o padding na altura total */
+}
+
+
+.contact-form label {
+    color: #444;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00d44f;
+    border-radius: 8px;
+    width: calc(100% - 20px); /* Definido o tamanho do input considerando o padding */
+    box-sizing: border-box;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #00d44f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #00b03c;
+}
+
+/* Estilo para o botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #444;
+}
+.close-form {
+    background-color: #00d44f; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Removendo a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.close-form:hover {
+    background-color: #00b03c; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o vídeo */
+.video-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 100%; /* Aumentando um pouco a proporção */
+    border-radius: 0; /* Removendo as bordas arredondadas */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+
+/* Estilo para tela menor que 768px (responsividade) */
+@media screen and (max-width: 768px) {
+    .contact-form-container {
+        width: 90%;
+    }
+    .company-info,
+    .contact-form {
+        width: 100%; /* Alterado para 100% para ocupar a largura total em telas menores */
+        float: none; /* Removido o float para que fiquem um abaixo do outro em telas menores */
+    }
+}

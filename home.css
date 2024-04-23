@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.custom-navbar {
+    position: relative; /* Garante que o navbar sobreponha outros elementos */
+    z-index: 1; /* Certifica-se de que o navbar tenha um z-index maior */
+    padding: 10px 0; /* espaçamento interno */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* largura máxima */
+    margin: 0 auto; /* centralizar */
+}
+
+.logo img {
+    width: 200px; /* largura do logo */
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px; /* espaçamento entre os links */
+}
+
+.nav-link {
+    color: #757373; /* cor do texto dos links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* transição suave */
+}
+
+.nav-link:hover {
+    color: #00d44f; /* cor do texto ao passar o mouse */
+}
+
+/* Estilo do botão de navegação */
+.hamburger {
+    display: none; /* Inicialmente oculto */
+}
+.login-btn {
+    background-color: #00d44f; /* cor do botão */
+    color: white; /* cor do texto */
+    border: none; /* remover borda */
+    padding: 10px 20px; /* espaçamento interno */
+    border-radius: 20px; /* bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* transição suave */
+}
+
+.login-btn:hover {
+    background-color: #00b93a; /* cor do botão ao passar o mouse */
+}
+.cart-count {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1; 
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 16px;
+    background-color: #00d44f;
+    color: #fff;
+  }
+
+
+/* Estilo para o botão do WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #25d366; /* Cor do texto do WhatsApp */
+    font-size: 16px;
+    text-decoration: none;
+    border: 2px solid #25d366; /* Adiciona uma borda sólida com a cor do WhatsApp */
+    border-radius: 20px;
+    transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição para suavizar a mudança de cor e borda */
+}
+
+.whatsapp-btn:hover {
+    color: #128c7e; /* Cor do texto do WhatsApp ao passar o mouse */
+    border-color: #128c7e; /* Cor da borda do WhatsApp ao passar o mouse */
+}
+
+/* Estilo para o ícone do WhatsApp dentro do botão */
+.whatsapp-btn i {
+    margin-right: 5px;
+}
+
+/* Estilo para o botão de navegação em telas menores */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #333; /* Cor das barras */
+        transition: transform 0.3s ease; /* Animação de transição */
+        margin-left: 10px;
+    }
+
+    /* Estilo para o botão de navegação quando clicado */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+        /* Exibe os links na forma vertical quando o menu está aberto */
+        .nav-links {
+            flex-direction: column;
+        justify-content: center; /* Centraliza os itens na vertical */
+        position: absolute;
+        top: 100%; /* posiciona abaixo do botão */
+        left: 0;
+        background-color: #fff; /* cor de fundo */
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease; /* transição suave */
+        text-align: left;
+        margin-left: 10px;
+        }
+    
+        .nav-links.active {
+            max-height: 200px; /* altura máxima ao ser aberto */
+            background-color: #ffffff; /* mudar aqui se quiser outra cor de fundo */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra com deslocamento horizontal de 0, deslocamento vertical de 4px, desfoque de 8px e opacidade de 0.1 */
+        }
+    
+        .nav-links.active li {
+            margin-right: 0; /* remove o espaçamento entre os links */
+            margin-bottom: 10px; /* espaçamento entre os links no modo vertical */
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px; /* largura máxima */
+            margin: 0 auto; /* centralizar */
+        }
+        
+    
+
+    .whatsapp-btn {
+        color: #25d366; /* Cor do texto do WhatsApp */
+        font-size: 16px;
+        text-decoration: none;
+        border: 2px solid #25d366; /* Adiciona uma borda sólida com a cor do WhatsApp */
+        border-radius: 20px;
+        transition: color 0.3s ease, border-color 0.3s ease; /* Adiciona transição para suavizar a mudança de cor e borda */
+    }
+    
+    .whatsapp-btn:hover {
+        color: #128c7e; /* Cor do texto do WhatsApp ao passar o mouse */
+        border-color: #128c7e; /* Cor da borda do WhatsApp ao passar o mouse */
+    }
+    
+    /* Estilo para o ícone do WhatsApp dentro do botão */
+    .whatsapp-btn i {
+        margin-right: 5px;
+    }
+    
+    .logo img {
+        width: 120px; /* largura do logo */
+    }
+}
+
+body {
+    font-weight:  bold;
+    background-color: #ffffff; /* Cor de fundo da página */
+}
+
+/* Estilo da Seção Home */
+.home-section {
+    background: rgb(255,255,255); /* fallback para navegadores que não suportam gradientes */
+    background: linear-gradient(133deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 37%, rgba(0,212,79,1) 100%);
+    width: 0 auto;
+}
+
+.container {
+    display: flex; /* Deixa os elementos em linha horizontal */
+    align-items: center; /* Centraliza verticalmente os itens da seção */
+    justify-content: space-around; /* Espaçamento entre os itens da seção */
+    padding: 10% 10%; /* Espaço lateral e superior/inferior da seção */
+    flex-wrap: wrap;
+}
+
+.home-content {
+    flex: 1; /* adicionado */
+    text-align: left;
+    color: #333; /* cor do texto */
+    font-family: 'Nunito', sans-serif; /* fonte */
+}
+
+.home-content h2 {
+    font-size: 3.5rem; /* tamanho do título */
+}
+.gradiente-text{
+    color: #ffffff; background-image: -webkit-linear-gradient(0deg, #00d19f 0%, #00d19f 50%, #00d44f 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+
+.home-content p{
+    font-size: 1.2rem; /* tamanho do texto */
+    margin-bottom: 20px; /* espaçamento inferior */
+    color: #757575;
+}
+
+.home-content .destaque {
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem; /* tamanho do destaque */
+    margin-bottom: 20px; /* espaçamento inferior */
+}
+
+.cta-btn {
+    background-color: #00d44f; /* cor do botão */
+    color: white; /* cor do texto */
+    border: none; /* remover borda */
+    padding: 10px 20px; /* espaçamento interno */
+    border-radius: 20px; /* bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* transição suave */
+}
+
+.cta-btn:hover {
+    background-color: #00b93a; /* cor do botão ao passar o mouse */
+}
+
+/* Estilo do vídeo */
+.home-video {
+    flex: 1; /* adicionado */
+    max-width: 100%; /* Nova linha */
+    height: auto;
+    overflow: hidden;
+    display: flex; /* Nova linha */
+    justify-content: center; /* Nova linha */
+    align-items: center; /* Nova linha */
+}
+
+.home-video video {
+    max-width: 100%; /* Nova linha */
+    height: auto;
+    position: relative;
+}
+
+/* Estilos para a seção de marcas */
+.marcas-section {
+    width: 100%;
+    background-color: #ffffff; /* Cor de fundo desejada */
+    overflow-x: hidden; /* Esconda a barra de rolagem horizontal */
+}
+
+/* Estilos para as marcas */
+.marcas-container {
+    display: flex;
+    overflow: hidden; /* Esconde o overflow das imagens */
+}
+
+.marcas-container img {
+    height: 70px;
+    margin: 20px; /* Espaçamento entre as imagens */
+    flex-shrink: 0; /* Impede que as imagens diminuam além do necessário */
+}
+
+/* Estilo para a seção de benefícios */
+.beneficios-section {
+    padding: 50px 0; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo */
+    display: flex; /* Utiliza flexbox para organizar os elementos lado a lado */
+    flex-direction: column; /* Organiza os elementos em uma coluna vertical */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* Estilo para o título e texto dentro da seção de benefícios */
+.beneficios-header {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Adiciona espaçamento inferior entre o título e os cards */
+}
+/* Estilo para o título da seção de benefícios */
+.beneficios-title {
+    color: #333; /* Cor do título */
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    color: #00d44f;
+           background-image: -webkit-linear-gradient(0deg, #00d44f 0%, #319e9e 50%, #00d36f 100%);
+            background-clip: text; -webkit-background-clip: text; text-fill-color: transparent;
+             -webkit-text-fill-color: transparent;
+          
+        
+}
+
+/* Estilo para o texto da seção de benefícios */
+.beneficios-description {
+    color: #757575; /* Cor do texto */
+    font-size: 1.2rem; /* Tamanho do texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo para a imagem dentro da seção de benefícios */
+.beneficios-image {
+    width: 50%; /* Define a largura da imagem para ocupar metade do espaço disponível */
+    max-width: 50%; /* Define a largura máxima da imagem */
+    margin-bottom: 30px; /* Adiciona espaçamento inferior entre a imagem e os cards */
+}
+
+/* Estilo para tornar a imagem responsiva */
+.beneficios-image img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaços extras */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura máxima do contêiner */
+}
+
+/* Estilo para os cards dentro da seção de benefícios */
+.beneficios-content {
+    width: 50%; /* Define a largura dos cards para ocupar metade do espaço disponível */
+    display: flex; /* Utiliza flexbox para organizar os cards lado a lado */
+    flex-direction: column; /* Organiza os cards em uma coluna vertical */
+    align-items: center; /* Centraliza os cards horizontalmente */
+}
+
+/* Estilo para os cards dentro da seção de benefícios */
+.card {
+    width: 90%; /* Define a largura dos cards */
+    margin-bottom: 30px; /* Adiciona um espaçamento inferior maior entre os cards */
+    background-color: #ffffff; /* Cor de fundo dos cards */
+    border-radius: 10px; /* Adiciona bordas arredondadas aos cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos cards */
+    padding: 20px; /* Adiciona espaçamento interno nos cards */
+}
+
+/* Estilo para o título dos cards */
+.card-content .card-title {
+    color: #000000; /* Cor preta para os títulos */
+    font-size: 1.5rem; /* Tamanho maior para os títulos */
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior entre o título e o texto */
+}
+
+/* Estilo para o texto dos cards */
+.card-content .card-text {
+    color: #757575; /* Cor cinza para o texto */
+    font-size: 1rem; /* Tamanho padrão para o texto */
+    line-height: 1.5; /* Espaçamento entre as linhas do texto */
+}
+
+/* Estilo para os ícones dos cards */
+.card-icon {
+    color: #00d44f; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Adiciona um espaçamento inferior entre o ícone e o título */
+}
+
+/* Estilo para a seção Começar a Empresa */
+.comecar-empresa-section {
+    padding: 50px 0; /* Espaçamento interno */
+    background: rgb(0,212,79);
+background: linear-gradient(279deg, rgba(0,212,79,1) 0%, rgba(34,33,33,1) 54%, rgba(34,33,33,1) 93%, rgba(0,211,111,1) 100%);
+    border-radius: 40px; /* Bordas arredondadas */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse as bordas arredondadas */
+    margin: 40px;
+}
+
+/* Estilo para o conteúdo da seção Começar a Empresa */
+.comecar-empresa-content {
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    background: rgba(255, 255, 255, 0.06);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.6px);
+-webkit-backdrop-filter: blur(7.6px);
+border: 1px solid rgba(255, 255, 255, 0.59);
+    padding: 30px; /* Espaçamento interno */
+    min-height: 100%; /* Garante que a altura da div seja pelo menos igual à altura da section */
+}
+
+
+
+/* Estilo para o texto da seção Começar a Empresa */
+.comecar-empresa-text {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    color: #ffffff; /* Cor branca para o texto */
+}
+
+.comecar-empresa-text h2 {
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: #ffffff; /* Muda a cor do título */
+}
+
+.comecar-empresa-text ul {
+    list-style-type: none; /* Remove a estilização padrão da lista */
+    padding: 0;
+}
+
+.comecar-empresa-text ul li {
+    margin-bottom: 10px; /* Espaçamento inferior entre os itens */
+}
+
+.comecar-empresa-text ul li i {
+    margin-right: 10px; /* Espaçamento à direita do ícone */
+}
+
+.comecar-empresa-text p {
+    font-size: 1.2rem; /* Tamanho do texto */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo para o botão Começar */
+.cta-btn {
+    background-color: #00d44f; /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remover borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.cta-btn:hover {
+    background-color: #00b93a; /* Cor do botão ao passar o mouse */
+}
+/* Estilo para o botão de começar */
+.comecar-empresa-content .cta-btn {
+    margin-top: 20px; /* Adiciona espaçamento acima do botão */
+}
+
+
+/* Estilo para a imagem da seção Começar a Empresa */
+.comecar-empresa-image {
+    width: 50%; /* Define a largura da imagem para ocupar metade do espaço disponível */
+}
+
+/* Estilo para tornar a imagem responsiva na seção Começar a Empresa */
+.comecar-empresa-image img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem não tenha espaços extras */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura máxima do contêiner */
+}
+
+.planos-section {
+    padding: 50px 0; /* Espaçamento interno */
+    background-color: #fffefe; /* Cor de fundo */
+    position: relative; /* Define a posição relativa para a seção */
+}
+
+.planos-title {
+    text-align: center;
+    margin-bottom: 50px; /* Aumenta o espaçamento entre o título principal e os cards */
+    position: absolute; /* Define a posição absoluta para o título */
+    top: 0; /* Fixa o título na parte superior da seção */
+    left: 50%; /* Alinha o título horizontalmente ao centro */
+    transform: translateX(-50%); /* Centraliza o título horizontalmente */
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    color: #00d44f; 
+    background-image: -webkit-linear-gradient(0deg, #00d44f 0%, #319e9e 50%, #00d36f 100%);
+     background-clip: text; -webkit-background-clip: text; text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+          
+        
+}
+
+.card-plano:hover {
+    transform: translateY(-5px);
+}
+
+.planos-cards {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff00;
+}
+
+/* Estilo para o card de plano destacado */
+#ethan-pro {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background-color: #000000;
+}
+#ethan-title {
+    color: #00d44f; 
+    background-image: -webkit-linear-gradient(0deg, #00d44f 0%, #319e9e 50%, #00d36f 100%); 
+    background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+#ethan-price {
+    color: #00d44f; 
+    background-image: -webkit-linear-gradient(0deg, #00d44f 0%, #319e9e 50%, #00d36f 100%); 
+    background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilo para os cards de plano */
+.card-plano {
+    width: 30%;
+    padding: 20px;
+    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid #00d44f;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Remova a altura fixa para permitir que os cards se ajustem ao conteúdo */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo para o título do plano */
+.plano-title {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+/* Estilo para o preço do plano */
+.plano-price {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #00d44f;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a descrição do plano */
+.plano-description {
+    color: #757575;
+    margin: 20px;
+    text-align: left;
+}
+.plano-description i {
+    margin-bottom: 10px; /* Adicione margem inferior para espaçamento vertical entre os itens da lista */
+}
+
+/* Estilo para o botão de ação do plano */
+.cta-btn-1,
+.cta-btn-2,
+.cta-btn-3 {
+    background-color: #00d44f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn-1:hover,
+.cta-btn-2:hover,
+.cta-btn-3:hover {
+    background-color: #00b93a;
+    transform: translateY(-5px);
+}
+
+
+
+.custom-footer {
+    background-color: #00d44f; /* Cor de fundo */
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #e9dddd;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+}
+.social-icons li a i {
+    color: #ffffff; /* Cor branca */
+    font-size: 24px; /* Tamanho dos ícones */
+    margin: 10px 0 5px 0;
+    padding: 5px;
+}
+
+.carrinho-modal.escondido {
+    display: none;
+  }
+  
+  .carrinho-modal.aberto {
+    display: block;
+  }
+  #carrinho-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.9s ease-out;
+    z-index: 1000;
+  }
+  
+  #carrinho-modal.fechado {
+    right: -100%;
+  }
+  
+  #carrinho-modal.aberto {
+    transform: translateX(0);
+  }
+  .botao-carrinho {
+    background-color: #00d44f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  #fechar-carrinho {
+    color: #757373;
+  }
+  #fechar-carrinho:hover {
+    color:#00d44f;
+  }
+  #carrinho-modal .carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #carrinho-modal .carrinho-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #carrinho-modal .carrinho-header button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #carrinho-modal .carrinho-itens {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #carrinho-modal .carrinho-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #carrinho-modal .carrinho-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  #carrinho-modal .carrinho-item .nome {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  #carrinho-modal .carrinho-item .preco {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  #carrinho-modal .carrinho-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    flex-wrap: wrap; /* Adiciona essa regra para permitir que o conteúdo do rodapé seja envolvido em linhas múltiplas */
+  }
+  
+  #carrinho-modal .carrinho-footer p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    flex-basis: 100%; /* Adiciona essa regra para garantir que o parágrafo ocupe 100% da largura disponível */
+  }
+  
+  #carrinho-modal .carrinho-footer button {
+    height: 40px;
+    color: #ffffff;
+    background-color: #00d44f;
+    padding: 0 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Adiciona essa regra para adicionar um pouco de margem ao topo do botão */
+  }
+  .carrinho-itens img {
+    max-width: 50px; /* Defina o tamanho máximo desejado para a imagem */
+    max-height: 50px; /* Defina o tamanho máximo desejado para a imagem */
+    width: auto; /* Certifique-se de que a largura seja ajustada automaticamente */
+    height: auto; /* Certifique-se de que a altura seja ajustada automaticamente */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    border: 2px solid #4bc952; /* Adiciona uma borda sólida */
+    margin-right: 15px; /* Ajuste o espaçamento direito para separar a imagem do texto */
+}
+  #carrinho-modal .carrinho-footer button:hover {
+    background-color: #4bc952;
+  }
+
+.powered-by {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.powered-by img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adicione aqui seus estilos específicos para telas menores */
+    .container {
+        display: flex; /* adicionado */
+        flex-wrap: wrap;
+    }
+    .planos-cards {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ffffff00;
+        flex-wrap: wrap;
+        position: relative;
+    }
+}
